@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14110F;
+  --charcoal: #1E1A17;
+  --umber: #2A241F;
+  --cream: #F6F2EC;
+  --sand: #EDE6DC;
+  --white: #FFFFFF;
+  --bronze: #B7895F;
+  --bronze-deep: #8A6340;
+  --text-dark: #1C1814;
+  --text-muted: #6B6158;
+  --text-light: #F3EDE4;
+  --text-light-muted: #C9BFB2;
+}
+
+@theme {
+  --color-ink: #14110F;
+  --color-charcoal: #1E1A17;
+  --color-umber: #2A241F;
+  --color-cream: #F6F2EC;
+  --color-sand: #EDE6DC;
+  --color-white: #FFFFFF;
+  --color-bronze: #B7895F;
+  --color-bronze-deep: #8A6340;
+  --color-text-dark: #1C1814;
+  --color-text-muted: #6B6158;
+  --color-text-light: #F3EDE4;
+  --color-text-light-muted: #C9BFB2;
+
+  --font-serif: 'Marcellus', Georgia, serif;
+  --font-sans: 'Jost', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--cream);
+  color: var(--text-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}
+
+/* Subtle image calibration for authentic hospitality photography */
+.photo-treatment {
+  filter: sepia(0.06) contrast(1.04) brightness(0.98);
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Section vertical padding clamp */
+.section-padding {
+  padding-top: clamp(64px, 8vw, 120px);
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+
+/* Fluid hero heading clamp */
+.fluid-h1 {
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+  line-height: 1.15;
+}
+
+/* Fluid section heading clamp */
+.fluid-h2 {
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.75rem);
+  line-height: 1.2;
+}
+
+/* Info strip elevation */
+.info-strip-shadow {
+  box-shadow: 0 20px 50px -20px rgba(20, 17, 15, 0.35);
+}

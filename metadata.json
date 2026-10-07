@@ -1,0 +1,6 @@
+{
+  "name": "Yaalex Executive Lodge",
+  "description": "A comfortable executive lodge for business and leisure stays in Takoradi, Ghana. Featuring on-site dining, swimming pool, free Wi-Fi, and dedicated parking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
