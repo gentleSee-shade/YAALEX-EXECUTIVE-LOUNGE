@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { EnquiryProvider } from './context/EnquiryContext';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Header } from './components/Header';
@@ -19,7 +19,7 @@ import { NotFound } from './pages/NotFound';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <EnquiryProvider>
         <div className="min-h-screen flex flex-col bg-[#F6F2EC] text-[#1C1814] pb-14 lg:pb-0">
           <ScrollToTop />
@@ -44,6 +44,6 @@ export default function App() {
           <EnquiryPanel />
         </div>
       </EnquiryProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

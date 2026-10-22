@@ -1,35 +1,12 @@
-# Yaalex Executive Lodge - Image Asset Directory
+# Yaalex Executive Lodge Images
 
-Place edited lodge photographs in this directory (`/public/images/`). The website automatically detects and applies subtle warm-tone hospitality calibration (`.photo-treatment`), fixed aspect ratios, and responsive covers.
+The lodge photographs are stored directly in this directory and referenced through `src/data/imagePaths.ts`. Descriptive filenames identify their use:
 
-Until an image file is added, the website automatically displays an elegant dark umber architectural placeholder frame with bronze accents and a descriptive label.
+- `lodge-*` — entrance, exterior, reception, lobby, and hallway
+- `guest-room-01.jpeg` through `guest-room-10.jpeg` — guest room photos
+- `swimming-pool.jpeg` — outdoor pool
+- `restaurant-dining-room.jpeg` — on-site dining
+- `laundry-*.jpeg` — laundry service
+- `family-at-lodge.jpeg` — family amenity
 
-## Recommended Naming Scheme:
-
-### 1. Exterior & Grounds:
-- `exterior-01.jpg` — Lodge main facade & entrance gate on J.B. Danquah Road
-- `exterior-02.jpg` — Property grounds and driveway
-- `parking-01.jpg` — Dedicated guest vehicle parking area
-- `property-01.jpg` — Foyer, reception counter, and lobby area
-
-### 2. Accommodations:
-- `room-type1-01.jpg` — Room Type 1 (Master / bed overview)
-- `room-type1-02.jpg` — Room Type 1 (Desk & workspace)
-- `room-type1-03.jpg` — Room Type 1 (En-suite bathroom)
-- `room-type2-01.jpg` — Room Type 2 (Master / bed overview)
-- `room-type2-02.jpg` — Room Type 2 (Seating corner)
-- `room-type3-01.jpg` — Room Type 3 (Family arrangement overview)
-- `room-type3-02.jpg` — Room Type 3 (Wardrobe / amenities)
-
-### 3. Leisure & Swimming Pool:
-- `pool-01.jpg` — Outdoor swimming pool main angle
-- `pool-02.jpg` — Poolside loungers and relaxation area
-
-### 4. On-Site Restaurant:
-- `restaurant-01.jpg` — Main dining hall and tables
-- `restaurant-02.jpg` — Table setup / dining detail
-
-## Specifications:
-- **Format:** JPG or WebP
-- **Resolution:** 1920×1280 (hero / full-width) or 1200×900 (cards / rooms / gallery)
-- **Compression:** High quality (~250 KB – 500 KB per photo for swift loading in Ghana)
+The `photo-treatment` styles preserve the site's warm look, and image containers keep their existing responsive aspect ratios and `object-fit: cover` behavior.

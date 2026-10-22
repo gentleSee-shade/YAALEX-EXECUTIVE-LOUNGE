@@ -1,3 +1,5 @@
+import { imagePath } from './imagePaths';
+
 export interface Room {
   id: string;
   name: string;
@@ -30,22 +32,22 @@ export const rooms: Room[] = [
     price: undefined, // Unverified -> "Rates on request"
     images: [
       {
-        src: "/images/room-type1-01.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 1 interior",
+        src: imagePath('guest-room-05.jpeg'),
+        alt: "Guest room with bed and sitting area at Yaalex Executive Lodge",
         caption: "Room Type 1 primary view",
-        placeholderLabel: "Add photo: Room Type 1 Master",
+        placeholderLabel: "Guest room",
       },
       {
-        src: "/images/room-type1-02.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 1 bathroom and desk",
-        caption: "Room Type 1 work area",
-        placeholderLabel: "Add photo: Room Type 1 Desk Area",
+        src: imagePath('guest-room-06.jpeg'),
+        alt: "Guest bedroom with red bedding and wardrobe",
+        caption: "Bedroom and wardrobe",
+        placeholderLabel: "Guest bedroom",
       },
       {
-        src: "/images/room-type1-03.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 1 detail",
-        caption: "Room Type 1 en-suite bathroom",
-        placeholderLabel: "Add photo: Room Type 1 Bathroom",
+        src: imagePath('guest-room-08.jpeg'),
+        alt: "Guest bedroom with red bedding",
+        caption: "Guest bedroom",
+        placeholderLabel: "Guest bedroom",
       },
     ],
     isPlaceholder: true,
@@ -62,16 +64,16 @@ export const rooms: Room[] = [
     price: undefined, // Unverified -> "Rates on request"
     images: [
       {
-        src: "/images/room-type2-01.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 2 bedroom area",
-        caption: "Room Type 2 bedroom",
-        placeholderLabel: "Add photo: Room Type 2 Master",
+        src: imagePath('guest-room-10.jpeg'),
+        alt: "Guest bedroom with bed and chairs",
+        caption: "Bedroom and chairs",
+        placeholderLabel: "Guest bedroom",
       },
       {
-        src: "/images/room-type2-02.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 2 seating corner",
-        caption: "Room Type 2 seating area",
-        placeholderLabel: "Add photo: Room Type 2 Seating",
+        src: imagePath('guest-room-09.jpeg'),
+        alt: "Guest room with bed and seating",
+        caption: "Bedroom and seating",
+        placeholderLabel: "Guest bedroom",
       },
     ],
     isPlaceholder: true,
@@ -88,16 +90,16 @@ export const rooms: Room[] = [
     price: undefined, // Unverified -> "Rates on request"
     images: [
       {
-        src: "/images/room-type3-01.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 3 family accommodation",
-        caption: "Room Type 3 overview",
-        placeholderLabel: "Add photo: Room Type 3 Master",
+        src: imagePath('guest-room-07.jpeg'),
+        alt: "Guest room with television and lounge seating",
+        caption: "Room with lounge seating",
+        placeholderLabel: "Guest room",
       },
       {
-        src: "/images/room-type3-02.jpg",
-        alt: "Yaalex Executive Lodge - Room Type 3 wardrobe and entry",
-        caption: "Room Type 3 entrance",
-        placeholderLabel: "Add photo: Room Type 3 Storage",
+        src: imagePath('guest-room-04.jpeg'),
+        alt: "Guest room with bed and sofa",
+        caption: "Bedroom and sofa",
+        placeholderLabel: "Guest room",
       },
     ],
     isPlaceholder: true,

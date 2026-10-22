@@ -5,6 +5,7 @@ import { useEnquiry } from '../context/EnquiryContext';
 import { ImageSlot } from '../components/ImageSlot';
 import { Button } from '../components/Button';
 import { FinalCTA } from '../components/FinalCTA';
+import { imagePath } from '../data/imagePaths';
 import { Utensils, Clock, FileText, MessageSquare } from 'lucide-react';
 
 export const Dining: React.FC = () => {
@@ -71,9 +72,9 @@ export const Dining: React.FC = () => {
 
           <div className="lg:col-span-6">
             <ImageSlot
-              src="/images/restaurant-01.jpg"
+              src={imagePath('restaurant-dining-room.jpeg')}
               alt="Restaurant dining room at Yaalex Executive Lodge"
-              placeholderLabel="Add photo: Restaurant Dining Room"
+              placeholderLabel="Restaurant dining room"
               aspectRatioClass="aspect-[4/3]"
               className="rounded-xs shadow-md"
             />
@@ -94,42 +95,16 @@ export const Dining: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#FFFFFF] p-2 rounded-xs border border-[#E2D8CA] shadow-xs">
+            <div className="bg-[#FFFFFF] p-2 rounded-xs border border-[#E2D8CA] shadow-xs sm:col-span-2 sm:col-start-1 lg:col-span-1 lg:col-start-2">
               <ImageSlot
-                src={diningGallery[0]?.src || "/images/restaurant-01.jpg"}
-                alt="Restaurant interior"
-                placeholderLabel="Add photo: Dining Room Seating"
+                src={diningGallery[0]?.src || imagePath('restaurant-dining-room.jpeg')}
+                alt="Restaurant dining room at Yaalex Executive Lodge"
+                placeholderLabel="Restaurant dining room"
                 aspectRatioClass="aspect-[4/3]"
                 className="rounded-xs"
               />
               <p className="p-3 text-xs text-[#6B6158] font-sans">
-                {diningGallery[0]?.caption || "Indoor restaurant seating"}
-              </p>
-            </div>
-
-            <div className="bg-[#FFFFFF] p-2 rounded-xs border border-[#E2D8CA] shadow-xs">
-              <ImageSlot
-                src={diningGallery[1]?.src || "/images/restaurant-02.jpg"}
-                alt="Table setting"
-                placeholderLabel="Add photo: Table Setup"
-                aspectRatioClass="aspect-[4/3]"
-                className="rounded-xs"
-              />
-              <p className="p-3 text-xs text-[#6B6158] font-sans">
-                {diningGallery[1]?.caption || "Comfortable table setting"}
-              </p>
-            </div>
-
-            <div className="bg-[#FFFFFF] p-2 rounded-xs border border-[#E2D8CA] shadow-xs sm:col-span-2 lg:col-span-1">
-              <ImageSlot
-                src="/images/pool-01.jpg"
-                alt="Poolside beverage and dining"
-                placeholderLabel="Add photo: Poolside Refreshment"
-                aspectRatioClass="aspect-[4/3]"
-                className="rounded-xs"
-              />
-              <p className="p-3 text-xs text-[#6B6158] font-sans">
-                Poolside area for evening refreshments
+                {diningGallery[0]?.caption || "Restaurant dining room"}
               </p>
             </div>
           </div>

@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, ArrowRight, ArrowDown } from 'lucide-react';
 import { Button } from './Button';
 import { useEnquiry } from '../context/EnquiryContext';
 import { siteConfig } from '../data/siteConfig';
+import { imagePath } from '../data/imagePaths';
 
 interface HeroSlide {
   id: string;
@@ -14,19 +15,19 @@ interface HeroSlide {
 const slides: HeroSlide[] = [
   {
     id: 'exterior',
-    src: '/images/exterior-01.jpg',
+    src: imagePath('lodge-entrance.jpeg'),
     alt: 'Yaalex Executive Lodge entrance in Takoradi, Ghana',
     label: 'Exterior & Grounds',
   },
   {
     id: 'room',
-    src: '/images/room-type1-01.jpg',
+    src: imagePath('guest-room-05.jpeg'),
     alt: 'Guest rooms at Yaalex Executive Lodge',
     label: 'Guest Accommodations',
   },
   {
     id: 'pool',
-    src: '/images/pool-01.jpg',
+    src: imagePath('swimming-pool.jpeg'),
     alt: 'Swimming pool at Yaalex Executive Lodge',
     label: 'Outdoor Pool',
   },

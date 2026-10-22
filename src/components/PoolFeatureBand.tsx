@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { imagePath } from '../data/imagePaths';
 import { ImageSlot } from './ImageSlot';
 import { Play, X } from 'lucide-react';
 
@@ -15,9 +16,9 @@ export const PoolFeatureBand: React.FC = () => {
         {/* Background Image with Dark Vignette */}
         <div className="absolute inset-0">
           <ImageSlot
-            src="/images/pool-01.jpg"
+            src={imagePath('swimming-pool.jpeg')}
             alt="Outdoor swimming pool at Yaalex Executive Lodge"
-            placeholderLabel="Add photo: Swimming Pool Area"
+            placeholderLabel="Swimming pool"
             aspectRatioClass="h-full w-full"
             className="h-full w-full"
             darkOverlay={true}

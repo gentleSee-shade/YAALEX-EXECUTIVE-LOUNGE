@@ -9,6 +9,7 @@ import { PoolFeatureBand } from '../components/PoolFeatureBand';
 import { MapBlock } from '../components/MapBlock';
 import { FinalCTA } from '../components/FinalCTA';
 import { ImageSlot } from '../components/ImageSlot';
+import { imagePath } from '../data/imagePaths';
 import { Button } from '../components/Button';
 import { siteConfig } from '../data/siteConfig';
 import { galleryItems } from '../data/gallery';
@@ -60,18 +61,18 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-6 relative flex items-start gap-4 sm:gap-6 pt-4 pb-8">
               <div className="w-[58%] shadow-lg">
                 <ImageSlot
-                  src="/images/exterior-01.jpg"
+                  src={imagePath('lodge-entrance.jpeg')}
                   alt="Yaalex Executive Lodge exterior facade in Takoradi"
-                  placeholderLabel="Add photo: Exterior Entrance"
+                  placeholderLabel="Lodge entrance"
                   aspectRatioClass="aspect-[3/4]"
                   className="rounded-xs"
                 />
               </div>
               <div className="w-[50%] -ml-6 sm:-ml-10 mt-12 sm:mt-16 shadow-2xl relative z-10">
                 <ImageSlot
-                  src="/images/room-type1-01.jpg"
+                  src={imagePath('guest-room-05.jpeg')}
                   alt="Yaalex Executive Lodge comfortable room interior"
-                  placeholderLabel="Add photo: Room Interior"
+                  placeholderLabel="Guest room"
                   aspectRatioClass="aspect-[3/4]"
                   className="rounded-xs border-4 border-[#F6F2EC]"
                 />
@@ -131,9 +132,9 @@ export const Home: React.FC = () => {
             {/* Left: Asymmetric Restaurant Image */}
             <div className="lg:col-span-7">
               <ImageSlot
-                src="/images/restaurant-01.jpg"
+                src={imagePath('restaurant-dining-room.jpeg')}
                 alt="On-site restaurant dining area at Yaalex Executive Lodge"
-                placeholderLabel="Add photo: Restaurant Dining Area"
+                placeholderLabel="Restaurant dining room"
                 aspectRatioClass="aspect-[16/10]"
                 className="rounded-xs shadow-md"
               />

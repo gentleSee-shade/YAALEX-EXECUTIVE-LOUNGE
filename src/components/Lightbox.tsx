@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GalleryItem } from '../data/gallery';
 
@@ -23,6 +23,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
 }) => {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const [failedImage, setFailedImage] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -91,17 +92,18 @@ export const Lightbox: React.FC<LightboxProps> = ({
           <img
             src={item.src}
             alt={item.alt}
-            onError={(e) => {
-              (e.currentTarget as HTMLElement).style.display = 'none';
-            }}
-            className="max-h-[72vh] w-auto max-w-full object-contain photo-treatment"
+            onError={() => setFailedImage(item.src)}
+            className={`max-h-[72vh] w-auto max-w-full object-contain photo-treatment ${
+              failedImage === item.src ? 'hidden' : ''
+            }`}
           />
 
-          {/* Designed fallback in case local file not yet uploaded */}
-          <div className="p-12 text-center text-[#C9BFB2]">
-            <p className="font-serif text-lg text-[#F3EDE4] mb-1">{item.placeholderLabel}</p>
-            <p className="text-xs uppercase tracking-wider text-[#B7895F]">Yaalex Executive Lodge</p>
-          </div>
+          {failedImage === item.src && (
+            <div className="p-12 text-center text-[#C9BFB2]">
+              <p className="font-serif text-lg text-[#F3EDE4] mb-1">{item.placeholderLabel}</p>
+              <p className="text-xs uppercase tracking-wider text-[#B7895F]">Yaalex Executive Lodge</p>
+            </div>
+          )}
         </div>
 
         {/* Caption */}

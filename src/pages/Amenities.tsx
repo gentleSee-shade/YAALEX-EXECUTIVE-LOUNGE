@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { amenitiesList, Amenity } from '../data/amenities';
 import { siteConfig } from '../data/siteConfig';
 import { ImageSlot } from '../components/ImageSlot';
+import { imagePath } from '../data/imagePaths';
 import { FinalCTA } from '../components/FinalCTA';
 import {
   Wifi,
@@ -48,19 +49,47 @@ export const Amenities: React.FC = () => {
   const getAmenityImage = (id: string) => {
     switch (id) {
       case 'wifi':
-        return { src: '/images/room-type1-02.jpg', placeholder: 'Add photo: Wi-Fi & Work Area' };
+        return {
+          src: imagePath('guest-room-05.jpeg'),
+          alt: 'Guest bedroom with a bed and sitting area',
+          placeholder: 'Guest room',
+        };
       case 'parking':
-        return { src: '/images/parking-01.jpg', placeholder: 'Add photo: On-Site Parking' };
+        return {
+          src: imagePath('lodge-entrance.jpeg'),
+          alt: 'Main entrance and facade of Yaalex Executive Lodge',
+          placeholder: 'Lodge entrance',
+        };
       case 'pool':
-        return { src: '/images/pool-01.jpg', placeholder: 'Add photo: Swimming Pool' };
+        return {
+          src: imagePath('swimming-pool.jpeg'),
+          alt: 'Outdoor swimming pool at Yaalex Executive Lodge',
+          placeholder: 'Swimming pool',
+        };
       case 'laundry':
-        return { src: '/images/property-01.jpg', placeholder: 'Add photo: Laundry Service' };
+        return {
+          src: imagePath('laundry-service.jpeg'),
+          alt: 'Laundry service garments prepared for a guest',
+          placeholder: 'Laundry service',
+        };
       case 'restaurant':
-        return { src: '/images/restaurant-01.jpg', placeholder: 'Add photo: Restaurant Dining' };
+        return {
+          src: imagePath('restaurant-dining-room.jpeg'),
+          alt: 'Dining room at Yaalex Executive Lodge',
+          placeholder: 'Restaurant dining room',
+        };
       case 'kid-friendly':
-        return { src: '/images/pool-02.jpg', placeholder: 'Add photo: Family & Pool Area' };
+        return {
+          src: imagePath('family-at-lodge.jpeg'),
+          alt: 'Children enjoying time together at the lodge',
+          placeholder: 'Family at the lodge',
+        };
       default:
-        return { src: '/images/exterior-01.jpg', placeholder: 'Add photo: Amenity' };
+        return {
+          src: imagePath('lodge-entrance.jpeg'),
+          alt: 'Main entrance and facade of Yaalex Executive Lodge',
+          placeholder: 'Lodge entrance',
+        };
     }
   };
 
@@ -95,7 +124,7 @@ export const Amenities: React.FC = () => {
                 <div>
                   <ImageSlot
                     src={imgInfo.src}
-                    alt={amenity.title}
+                    alt={imgInfo.alt}
                     placeholderLabel={imgInfo.placeholder}
                     aspectRatioClass="aspect-[16/10]"
                   />
